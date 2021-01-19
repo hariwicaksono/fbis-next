@@ -26,7 +26,7 @@ componentDidMount = () => {
         <Container>
 
     <Navbar bg="primary" variant="dark" expand="lg">
-    <div className="navbar-top pt-3 pb-1">
+    <div className="navbar-top pt-3 pb-0">
                 <div className="d-flex justify-content-between align-items-center">
                 <Nav className="navbar-top-left-menu">
                 <Navbar.Brand className="text-light d-none d-sm-none d-md-block"><img src="/logo_uap.png" style={{width: '30px'}} /> {siteParent}</Navbar.Brand>
@@ -44,7 +44,7 @@ componentDidMount = () => {
           </div>
     </div>
 
-    <div className="navbar-bottom py-3">
+    <div className="navbar-bottom pt-3 pb-3">
                 <div className="d-flex justify-content-between align-items-center">
     <Link href="/" passHref><Navbar.Brand className="text-uppercase text-light d-none d-sm-none d-md-block font-weight-bold">{siteTitle}</Navbar.Brand></Link>
     <Link href="/" passHref><Navbar.Brand className="text-light d-block d-sm-block d-md-none d-lg-none d-xl-none font-weight-bold">{siteName}</Navbar.Brand></Link>

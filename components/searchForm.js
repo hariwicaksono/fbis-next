@@ -53,7 +53,7 @@ class SearchForm extends Component {
                 <div className="input-group">
                     <Form.Control size="lg" type="text" name="query" placeholder="Pencarian" onChange={this.handlerChange} required />
                     <span className="input-group-append">
-                    <Button className="border text-secondary" type="submit" variant="light">
+                    <Button className="border text-light py-0" type="submit" variant="primary">
                     {
                         this.state.loading
                         ?

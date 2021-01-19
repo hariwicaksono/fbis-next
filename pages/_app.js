@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 //import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/css/globals.css';
+import '../styles/css/argon-design-system.css';
+import '../styles/css/styles.css';
 import 'spin.js/spin.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';

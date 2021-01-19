@@ -10,7 +10,7 @@ class Footer extends Component{
      
         return(  
                
-            <div className="text-dark border-0 py-4" style={{backgroundColor:'#ADD8E6'}}>
+            <footer className="text-dark border-0 py-4" style={{backgroundColor:'#ADD8E6'}}>
               <Container>
             <Row>
 
@@ -39,7 +39,7 @@ class Footer extends Component{
            
             <div className="text-dark mt-3 text-center">Hak Cipta © {(new Date().getFullYear())} Hak cipta dilindungi Undang-undang. {siteTitle} ({siteName}) {siteParent}<br/>This site is made with <FaHeart className="text-danger" /> by <Link href="https://plt.amikompurwokerto.ac.id" passHref><a className="">UPT Pengembangan Laboratorium dan Teknologi</a></Link></div>
             </Container>
-            </div>
+            </footer>
 
 
         )
