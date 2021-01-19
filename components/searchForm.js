@@ -49,9 +49,9 @@ class SearchForm extends Component {
 
         return (
            
-                <Form className="mr-3 py-0 w-100" onSubmit={this.handlerSubmit}>
+                <Form className="mr-3 w-100" onSubmit={this.handlerSubmit}>
                 <div className="input-group">
-                    <Form.Control size="sm" className="border" type="text" name="query" placeholder="Pencarian" onChange={this.handlerChange} required/>
+                    <Form.Control size="lg" type="text" name="query" placeholder="Pencarian" onChange={this.handlerChange} required />
                     <span className="input-group-append">
                     <Button className="border text-secondary" type="submit" variant="light">
                     {

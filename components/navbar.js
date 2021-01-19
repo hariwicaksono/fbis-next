@@ -22,10 +22,10 @@ componentDidMount = () => {
   render(){
         
     return(
-      <header id="header" className="shadow border-bottom">
+      <header id="header" className="shadow border-bottom sticky-top">
         <Container>
 
-    <Navbar bg="primary" variant="dark" expand="lg" sticky="top">
+    <Navbar bg="primary" variant="dark" expand="lg">
     <div className="navbar-top pt-3 pb-1">
                 <div className="d-flex justify-content-between align-items-center">
                 <Nav className="navbar-top-left-menu">
@@ -37,7 +37,7 @@ componentDidMount = () => {
       <SearchForm/>
       <Nav.Item>
         <Nav.Link>
-        <MdBrightness4 />
+        <MdBrightness4 size="1.2rem"/>
         </Nav.Link>
        </Nav.Item>
     </Nav>
@@ -49,7 +49,9 @@ componentDidMount = () => {
     <Link href="/" passHref><Navbar.Brand className="text-uppercase text-light d-none d-sm-none d-md-block font-weight-bold">{siteTitle}</Navbar.Brand></Link>
     <Link href="/" passHref><Navbar.Brand className="text-light d-block d-sm-block d-md-none d-lg-none d-xl-none font-weight-bold">{siteName}</Navbar.Brand></Link>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav"  >
+    <Navbar.Collapse id="basic-navbar-nav" >
+      <Navbar.Toggle className="float-right" aria-controls="basic-navbar-nav" />
+
         <Nav className="mr-auto">
         <Nav.Item>
         <Link href="/" activeClassName="active" passHref><Nav.Link>Beranda</Nav.Link></Link>
