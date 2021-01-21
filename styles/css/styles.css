@@ -1,21 +1,36 @@
-.navbar-brand img {height: 100%;}
-.navbar-brand {
-    color:#fff !important;
-    font-size: 1rem;
+.navbar-brand img {height: 95%;}
+#logo {
+	vertical-align:middle;
 }
+.navbar-brand span {
+	font-size:1.125rem;
+	line-height:1.2;
+	font-weight: 400;
+	display:inline-block;
+	vertical-align:middle;
+	padding:0 0 0 12px;
+}
+.navbar-brand b {
+	display:block;
+	line-height:1;
+}
+
 /* Navbar */
 header {
-    background: #5e72e4;
+    background: #1E90FF;
   }
   
   header .navbar {
-    font-weight: 500;
+    font-weight: 400;
     padding: 0;
     display: block;
   }
   
   header .navbar .navbar-brand {
-    margin-right: 0;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #fff !important;
+    font-weight: 700;
   }
   
   header .navbar .navbar-brand img {
@@ -78,7 +93,7 @@ header {
   
   header .navbar-top .navbar-top-left-menu .nav-item .nav-link:hover,
   header .navbar-top .navbar-top-right-menu .nav-item .nav-link:hover {
-    color: #233dd2;
+    color: #1E3CFF;
   }
   
   header .navbar-top .navbar-top-left-menu .nav-item .nav-link:after,
@@ -135,7 +150,7 @@ header {
   
   @media (max-width: 999px) {
     header .navbar-bottom .navbar-nav {
-      padding-top: 50px;
+      padding-top: 30px;
     }
   }
   
@@ -148,7 +163,7 @@ header {
     font-style: normal;
     line-height: 1.31;
     letter-spacing: normal;
-    padding: 0 15px;
+    padding: 10px 15px;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
@@ -156,18 +171,24 @@ header {
   }
   
   header .navbar-bottom .navbar-nav .nav-item .nav-link:hover {
-    color: #233dd2;
+    background-color: #1E3CFF;
   }
   
   @media (max-width: 999px) {
     header .navbar-bottom .navbar-nav .nav-item .nav-link {
-      padding: 15px 15px;
+      padding: 10px 12px;
     }
   }
   
   @media (max-width: 1024px) {
     header .navbar-bottom .navbar-nav .nav-item .nav-link {
-      padding: 0 12px;
+      padding: 10px 12px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    header .navbar-bottom .navbar-nav .dropdown-item {
+      padding: 15px 15px;
     }
   }
   

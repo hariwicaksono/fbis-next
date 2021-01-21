@@ -16,9 +16,9 @@ class Footer extends Component{
 
                 <Col md={8}>
                 <h4>Hubungi Kami</h4>
-                <h4 className="mb-0 font-weight-bold">{siteTitle}</h4>
-                <h3 className="font-weight-normal">{siteParent}</h3>
-                <p className="lead text-dark"><FaMap /> Jl. Let. Jend. Pol. Soemarto (depan SPN) Purwokerto / Lt.1<br/>
+                <h4 className="mb-0 font-weight-normal">{siteParent}</h4>
+                <h4 className="font-weight-bold">{siteTitle}</h4>
+                <p className="mt-0 lead text-dark"><FaMap /> Jl. Let. Jend. Pol. Soemarto (depan SPN) Purwokerto / Lt.1<br/>
                 <FaPhoneSquare /> (0281) 623321 / (fax) (0281) 623196<br/>
                 <MdEmail /> amikom@amikompurwokerto.ac.id
                 

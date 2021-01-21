@@ -25,29 +25,49 @@ componentDidMount = () => {
       <header id="header" className="shadow border-bottom sticky-top">
         <Container>
 
-    <Navbar bg="primary" variant="dark" expand="lg">
+    <Navbar bg="" variant="dark" expand="lg" style={{backgroundColor: '#1E90FF !important'}}>
     <div className="navbar-top pt-3 pb-0">
-                <div className="d-flex justify-content-between align-items-center">
-                <Nav className="navbar-top-left-menu">
-                <Navbar.Brand className="text-light d-none d-sm-none d-md-block"><img src="/logo_uap.png" style={{width: '30px'}} /> {siteParent}</Navbar.Brand>
-      <Navbar.Brand className="text-light d-block d-sm-block d-md-none d-lg-none d-xl-none"><img src="/logo_uap.png" style={{width: '30px'}} /> UAP</Navbar.Brand>
+        <div className="d-flex justify-content-between align-items-center">
+      <Nav className="navbar-top-left-menu">
+      <Nav.Item>
+        <Link href="/kontak" activeClassName="active" passHref><Nav.Link>Advertise</Nav.Link></Link>
+        </Nav.Item>
+        <Nav.Item>
+        <Link href="/kontak" activeClassName="active" passHref><Nav.Link>Events</Nav.Link></Link>
+        </Nav.Item>
+        <Nav.Item>
+        <Link href="/kontak" activeClassName="active" passHref><Nav.Link>Write for Us</Nav.Link></Link>
+        </Nav.Item>
+        <Nav.Item>
+        <Link href="/kontak" activeClassName="active" passHref><Nav.Link>In the Press</Nav.Link></Link>
+        </Nav.Item>
       </Nav>
 
     <Nav className="navbar-top-right-menu">
       <SearchForm/>
+
       <Nav.Item>
         <Nav.Link>
-        <MdBrightness4 size="1.2rem"/>
+        <MdBrightness4 size="1.5rem"/>
         </Nav.Link>
        </Nav.Item>
+
     </Nav>
           </div>
     </div>
 
     <div className="navbar-bottom pt-3 pb-3">
-                <div className="d-flex justify-content-between align-items-center">
-    <Link href="/" passHref><Navbar.Brand className="text-uppercase text-light d-none d-sm-none d-md-block font-weight-bold">{siteTitle}</Navbar.Brand></Link>
-    <Link href="/" passHref><Navbar.Brand className="text-light d-block d-sm-block d-md-none d-lg-none d-xl-none font-weight-bold">{siteName}</Navbar.Brand></Link>
+        <div className="d-flex justify-content-between align-items-center">
+      <Link href="/" passHref>
+      <Navbar.Brand className="brand text-uppercase text-light d-none d-sm-none d-md-block">
+      <img id="logo" src="/logo_uap.png" style={{width: '60px'}} />
+      <span>{siteParent}<b>{siteTitle}</b></span>
+      </Navbar.Brand>
+      </Link>
+      <Link href="/" passHref><Navbar.Brand className="text-light d-block d-sm-block d-md-none d-lg-none d-xl-none">
+      <img id="logo" src="/logo_uap.png" style={{width: '50px'}} /> <span><b>{siteName}</b></span></Navbar.Brand>
+      </Link>
+      
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav" >
       <Navbar.Toggle className="float-right" aria-controls="basic-navbar-nav" />
@@ -71,7 +91,7 @@ componentDidMount = () => {
             <Link href="#" passHref><NavDropdown.Item>Informasi Kampus</NavDropdown.Item></Link>
         </NavDropdown>
         <Nav.Item>
-        <Link href="/kontak" activeClassName="active" passHref><Nav.Link>Kontak <span className="mdi mdi-home"></span></Nav.Link></Link>
+        <Link href="/kontak" activeClassName="active" passHref><Nav.Link>Kontak</Nav.Link></Link>
         </Nav.Item>
 
       

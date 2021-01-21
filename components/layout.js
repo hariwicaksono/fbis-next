@@ -23,7 +23,7 @@ class Layout extends Component {
       <meta name="description" content={siteDesc} />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
       </Head>
 
       <Navbar />
@@ -45,9 +45,7 @@ class Layout extends Component {
       
       <Footer />
       <style jsx global>{`
-        .nav-link {
-         text-transform: capitalize;
-        }
+        
       `}</style>
     </>
  );
