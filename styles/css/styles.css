@@ -202,3 +202,12 @@ header {
     height: 40px;
     border: 1px solid #e6e7e8;
   }
+.slick-prev:before, .slick-next:before {
+    color: #09529b !important;
+}
+.slick-prev {
+    z-index: 1;
+}
+.slick-next {
+    z-index: 1;
+}

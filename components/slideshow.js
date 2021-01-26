@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {ImagesUrl} from '../libs/url';
+import {ImagesUrl} from '../libs/urls';
 import {Carousel} from 'react-bootstrap';
 import Slider from "react-slick";
 
@@ -13,18 +13,20 @@ class Slideshow extends Component {
     }
     render() {
         const settings = {
+            className: "",
             centerMode: true,
-            centerPadding: '200px',
+            centerPadding: '50px',
             slidesToShow: 1,
             autoplay: true,
             autoplaySpeed: 6000,
-            arrows: false,
+            arrows: true,
+            dots: true,
             responsive: [
                 {
                     breakpoint: 992,
                     settings: {
                         centerMode: true,
-                        centerPadding: '160px',
+                        centerPadding: '40px',
                         slidesToShow: 1
                     }
                 },
@@ -32,7 +34,7 @@ class Slideshow extends Component {
                     breakpoint: 768,
                     settings: {
                         centerMode: true,
-                        centerPadding: '80px',
+                        centerPadding: '30px',
                         slidesToShow: 1
                     }
                 },
@@ -47,19 +49,26 @@ class Slideshow extends Component {
             ]
           };
         const ListSlider = this.props.data.map((s, index) => (
-            <div>
+            <>
                 <img
-                className="slick-image mx-xl-2 mx-lg-2 mx-md-2 mx-sm-1 mx-1 rounded"
-                src={url+s.gambar_slide}
-                alt={s.tulisan_slide}
+                className="mx-xl-2 mx-lg-2 mx-md-2 mx-sm-1 mx-0 rounded"
+                src={url+s.GAMBAR_SLIDE}
+                alt={s.TEKS_SLIDE}
+                style={{minHeight: '100px', maxWidth: '900px'}}
                 />
-            </div>
+            </>
 
         ));
         return (
+            <div className="row">
+<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <Slider {...settings}>
+                
                 {ListSlider}
+               
             </Slider>
+            </div>
+                </div>
         )
     }
 }
