@@ -21,11 +21,11 @@ class MasterModel extends CI_Model {
 	}
 
 	public function get_slideshow($id = null)
-	{
+	{ 
 		if ($id == null) {
-			return $this->db->get_where('FBIS_SLIDESHOW',['aktif'=>'1'])->result_array();
+			return $this->db->get_where('banner',['PARENT'=>'fbis','AKTIF'=>'1'])->result_array();
 		} else { 
-			return $this->db->get_where('FBIS_SLIDESHOW',['id'=>$id,'aktif'=>'1'])->result_array();
+			return $this->db->get_where('banner',['ID_BANNER'=>$id,'PARENT'=>'fbis','AKTIF'=>'1'])->result_array();
 		}
 	}
 

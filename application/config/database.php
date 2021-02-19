@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '172.16.15.39,1433',
+	'hostname' => '172.16.15.37,1433',
 	'username' => 'smart-public1',
 	'password' => 'sm4r7-publ1c1',
-	'database' => 'DB_TEST',
+	'database' => 'DB_PWT',
 	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
