@@ -31,8 +31,8 @@ class Index extends Component{
         <title>Home - {siteName} | {siteTitle} {siteParent}</title>
       </Head>
 
-      <section className="py-3">
-      <Container>
+      <section>
+      <Container fluid>
       { this.state.loading ?
           <>
             <Skeleton height={400} />

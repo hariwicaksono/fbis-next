@@ -49,7 +49,7 @@ class SearchForm extends Component {
 
         return (
            
-                <Form className="mr-3 w-100" onSubmit={this.handlerSubmit}>
+                <Form className="w-100" onSubmit={this.handlerSubmit}>
                 <div className="input-group">
                     <Form.Control size="lg" type="text" name="query" placeholder="Pencarian" onChange={this.handlerChange} required />
                     <span className="input-group-append">

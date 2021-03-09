@@ -3,15 +3,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MasterModel extends CI_Model {
 
-	public function get_profil($id)
+	public function get_profil($id = null)
 	{ 
-		$this->db->select('f.*, fk.NAMA_FAK, fk.NIK_DEKAN, pt.NAMA');
-        $this->db->from('FBIS_PROFIL f');
-        $this->db->join('PROFIL_PT pt', 'f.KODE_PT = pt.KODE');
-        $this->db->join('FAKULTAS fk', 'f.ID_FAK = fk.KD_FAK');
-        $this->db->where('f.id', $id);
+		if ($id == null) {
+		$this->db->select('*');
+        $this->db->from('menu');
+        $this->db->where('menu_parent', 'profil');
+		$this->db->where('group_user', 'fbis');
         $query = $this->db->get();
 		return $query->result_array();
+		} else { 
+			$this->db->select('*');
+			$this->db->from('menu');
+			$this->db->where('menu_parent', 'profil');
+			$this->db->where('group_user', 'fbis');
+			$this->db->where('idmodul', $id);
+			$query = $this->db->get();
+			return $query->result_array();
+		}
 	}
 
 	public function put_profil($id,$data)

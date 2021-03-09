@@ -50,24 +50,24 @@ class Slideshow extends Component {
             ]
           };
         const ListSlider = this.props.data.map((s, index) => (
-            <Carousel.Item key={s.ID_BANNER}>
-                <img 
-                className="d-block w-100"
+          
+                <img key={s.ID_BANNER}
+                className="mx-xl-2 mx-lg-2 mx-md-2 mx-sm-1 mx-0 rounded"
                 src={url+s.GAMBAR}
                 alt={s.TEKS}
-                style={{minHeight: '100px'}}
+                style={{minHeight: '100px', maxWidth: '900px'}}
                 />
-            </Carousel.Item>
+         
 
         ));
         return (
             <div className="row">
 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <Carousel>
+            <Slider {...settings}>
                 
                 {ListSlider}
                
-            </Carousel>
+            </Slider>
             </div>
                 </div>
         )

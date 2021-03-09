@@ -6,3 +6,7 @@ export const SiteUrl = () => {
 export const ImagesUrl = () => {
     return "http://localhost/fbis-next/public/images/"
 }
+
+export const BannerUrl = () => {
+    return "https://adm.amikompurwokerto.ac.id/images/slides/fbis/"
+}

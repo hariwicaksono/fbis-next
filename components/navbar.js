@@ -25,7 +25,7 @@ componentDidMount = () => {
       <header id="header" className="shadow border-bottom sticky-top">
         <Container>
 
-    <Navbar bg="" variant="dark" expand="lg" style={{backgroundColor: '#1E90FF !important'}}>
+    <Navbar bg="" variant="dark" expand="lg" style={{backgroundColor: '#4680FF !important'}}>
     <div className="navbar-top pt-3 pb-0">
         <div className="d-flex justify-content-between align-items-center">
       <Nav className="navbar-top-left-menu">
@@ -43,16 +43,10 @@ componentDidMount = () => {
         </Nav.Item>
       </Nav>
 
-    <Nav className="navbar-top-right-menu">
-      <SearchForm/>
+        <Nav className="navbar-top-right-menu">
+          <SearchForm/>
 
-      <Nav.Item>
-        <Nav.Link>
-        <MdBrightness4 size="1.5rem"/>
-        </Nav.Link>
-       </Nav.Item>
-
-    </Nav>
+        </Nav>
           </div>
     </div>
 

@@ -5,8 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Format.php';
 
-class ProfilController extends REST_Controller{
-
+class Slideshow extends REST_Controller{
+ 
 	public function __construct($config = 'rest')
     {
         parent::__construct($config);
@@ -22,14 +22,17 @@ class ProfilController extends REST_Controller{
 
 	public function index_get()
 	{
-		$id = '1';
-		$profil = $this->Model->get_profil($id);
-		
+		$id = $this->get('id');
+		if ($id == null) {
+			$slide = $this->Model->get_slideshow();
+		} else {
+			$slide = $this->Model->get_slideshow($id);
+		}
 
-		if ($profil) {
+		if ($slide) {
 			$this->response([
 				'status' => 1,
-				'data' => $profil
+				'data' => $slide
 			],REST_Controller::HTTP_OK);
 		} else {
 			$this->response([
@@ -37,21 +40,62 @@ class ProfilController extends REST_Controller{
 				'data' => 'Data Not Found'
 			],REST_Controller::HTTP_NOT_FOUND);
 		}
-		 
 
 	} 
+
+	public function index_post()
+	{
+		$data = [
+			'img_slide' => $this->post('foto'),
+			'text_slide' => $this->post('text_slide')
+		];
+
+		if ($this->Model->post_slideshow($data) > 0 ) {
+			$this->response([
+				'status' => 1,
+				'data' => 'Succes Post data'
+			],REST_Controller::HTTP_OK);
+		} else {
+			$this->response([
+				'status' => 0,
+				'data' => 'Failed Post Data'
+			],REST_Controller::HTTP_NOT_FOUND);
+		}
+	}
+
+
+	public function index_delete()
+	{
+		$id = $_GET['id'];
+		if ($id == null) {
+			$this->response([
+				'status' => 404,
+				'data' => 'id_not found'
+			],REST_Controller::HTTP_BAD_REQUEST);
+		} else {
+			if($this->Model->delete_produk($id) > 0){
+					$this->response([
+					'status' => 1,
+					'data' => 'Succes Delete data'
+				],REST_Controller::HTTP_OK);
+			} else {
+				$this->response([
+					'status' => 0,
+					'data' => 'Failed Delete Data'
+				],REST_Controller::HTTP_NOT_FOUND);
+			}
+		} 
+	}
+
 
 	public function index_put()
 	{
 		$id = $this->put('id');
 		$data = [
-			'company' => $this->put('company'),
-			'website' => $this->put('website'),
-			'phone' => $this->put('phone'),
-			'email' => $this->put('email'),
+			'text_slide' => $this->put('text_slide')
 		];
 
-		if ($this->Model->put_setting($id,$data) > 0) {
+		if ($this->Model->put_slideshow($id,$data) > 0) {
 			$this->response([
 				'status' => 1,
 				'data' => 'Succes Update data'

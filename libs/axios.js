@@ -105,8 +105,8 @@ const GetBlogId = (data) => GET_ID('BlogController?id=',data)
 const PostBlog = (data) => POST('BlogController',data);
 const PutBlog = (data) => PUT('BlogController',data);
 const DeleteBlog = (id) => DELETE('BlogController/index_delete?id=',id);
-const GetSlideshow = () => GET('SlideshowController');
-const GetSlideshowId = (data) => GET_ID('SlideshowController?id=',data)
+const GetSlideshow = () => GET('Slideshow');
+const GetSlideshowId = (data) => GET_ID('Slideshow?id=',data)
 
 const API = {
     GetSlideshow,
